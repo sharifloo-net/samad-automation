@@ -1,4 +1,7 @@
 def main():
+	from dotenv import load_dotenv
+	load_dotenv()
+	
 	from samad import Samad
 	from bot import Bot
 	

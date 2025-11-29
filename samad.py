@@ -8,12 +8,12 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class Samad:
-	service = Service()
 	TARGET_UNIVERSITY = os.getenv('TARGET_UNIVERSITY')
 	CHROME_WEBDRIVER_PATH = os.getenv('CHROME_WEBDRIVER_PATH')
 	USERNAME = os.getenv('SAMAD_USER')
 	PASSWORD = os.getenv('SAMAD_PASS')
 	
+	service = Service(CHROME_WEBDRIVER_PATH)
 	driver = webdriver.Chrome(service=service)
 	wait = WebDriverWait(driver, 5)
 	
