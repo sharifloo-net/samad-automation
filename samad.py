@@ -91,7 +91,7 @@ class Samad:
 	def reservation_status_next_page(self):
 		next_page = self.wait.until(
 			EC.element_to_be_clickable(
-				(By.CLASS_NAME, 'flaticon-left-chevron')
+				(By.XPATH, "(//*[contains(@class, 'week-changer-buttons')])[2]")
 			)
 		)
 		next_page.click()
